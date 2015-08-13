@@ -8,6 +8,12 @@ describe('', function() {
     console.log('~*~*~*~*~*~*~*~');
     console.log(typeof(element(by.id('p_entity_name'))));
     console.log('~*~*~*~*~*~*~*~');
+
+    var input = element(by.id('p_entity_name'));
+    input.sendKeys('daycare');
+    input.sendKeys(protractor.Key.ENTER);
+    browser.sleep(3000); // 3s to take a look ;)
+
     browser.actions().sendKeys(protractor.Key.ENTER).perform();
   });
 });
